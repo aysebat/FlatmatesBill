@@ -75,13 +75,19 @@ class PdfReport:
         webbrowser.open('file://'+os.path.realpath(self.filename))
 
 
+bill_amount = float(input("Please, enter the bill amount, bill: "))
+bill_period = input("Enter the bill period, Month Year: ")
+name1 = input("Name of the first flatmate: ")
+flatmate1_days = float(input(f"Number of days for the {name1}: "))
+name2 = input("Name of the second Flatmate: ")
+flatmate2_days = float(input(f"Number of days for the {name2}: "))
 
-the_bill = Bill(amount=120, period="March 2021")
-john = Flatmate(name="John", days_in_house=20)
-marry = Flatmate(name="Marry", days_in_house=25)
+the_bill = Bill(amount=bill_amount, period=bill_period)
+flatmate1 = Flatmate(name=name1, days_in_house=flatmate1_days)
+flatmate2 = Flatmate(name=name2, days_in_house=flatmate2_days)
 
-print("Johns Pays",john.pays(bill=the_bill, flatmate2=marry))
-print("Marry Pays",marry.pays(bill=the_bill, flatmate2=john))
+print(f" {flatmate1.name} Pays: ",flatmate1.pays(bill=the_bill, flatmate2=flatmate2))
+print(f" {flatmate1.name} Pays: ",flatmate2.pays(bill=the_bill, flatmate2=flatmate1))
 
-pdf_report = PdfReport(filename='Report1.pdf')
-pdf_report.generate(flatmate1=john, flatmate2=marry, bill=the_bill)
+pdf_report = PdfReport(filename=f"Report {bill_period}.pdf")
+pdf_report.generate(flatmate1=flatmate1, flatmate2=flatmate2, bill=the_bill)

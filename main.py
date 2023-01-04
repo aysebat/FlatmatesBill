@@ -13,7 +13,7 @@ flatmate1 = Flatmate(name=name1, days_in_house=flatmate1_days)
 flatmate2 = Flatmate(name=name2, days_in_house=flatmate2_days)
 
 print(f" {flatmate1.name} Pays: ",flatmate1.pays(bill=the_bill, flatmate2=flatmate2))
-print(f" {flatmate1.name} Pays: ",flatmate2.pays(bill=the_bill, flatmate2=flatmate1))
+print(f" {flatmate2.name} Pays: ",flatmate2.pays(bill=the_bill, flatmate2=flatmate1))
 
 pdf_report = PdfReport(filename=f"Report {bill_period}.pdf")
 pdf_report.generate(flatmate1=flatmate1, flatmate2=flatmate2, bill=the_bill)

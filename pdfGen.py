@@ -1,8 +1,6 @@
+import os
 import webbrowser
-
 from fpdf import FPDF
-
-
 class PdfReport:
     """
     Creates a Pdf file that contains the about flatmates
@@ -48,7 +46,7 @@ class PdfReport:
         pdf.cell(w=100, h=40, txt=flatmate2_pay, border=0, ln=1)
 
         #generate the pdf file
-        pdf.output(self.filename)
+        pdf.output(f"Report/{self.filename}")
 
         #automaticaly open the pdf file
-        webbrowser.open('file://'+os.path.realpath(self.filename))
+        webbrowser.open('file://'+os.path.realpath(f"Report/{self.filename}"))

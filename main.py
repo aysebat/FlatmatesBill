@@ -4,13 +4,16 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 class HomePage(MethodView):
     def get(self):
         return render_template('index.html')
 
 
 class BillFormPage(MethodView):
-    pass
+
+    def get(self):
+        return render_template('bill_form_page.html')
 
 
 class ResultsPage(MethodView):

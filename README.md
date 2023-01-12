@@ -19,3 +19,5 @@ Gives the following
 Projest URL uploaed to the repl.it you may use the project as you wish.
 Project URL: https://replit.com/@aaysbt/flatmate?embed=1
 
+*Note: This project is part of Advanced Python Programming: Build 10 OOP Applications
+UDEMY course from Ardit Sulce*

@@ -185,3 +185,15 @@ input[type=submit]{
    border: none;
    font-size: inherit;
    cursor: pointer;}
+
+.result{
+   display: flex;
+   flex-direction: column;
+
+
+}
+
+.result-text {
+   font-size : 2rem;
+
+}

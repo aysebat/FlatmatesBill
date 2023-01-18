@@ -9,11 +9,30 @@
 <body>
 <div class="result">
     <h2 >Results Page</h2>
-    <p class="result-text">
-    Period:   {{period}} <br>
-    {{name1}} pays {{ amount1}} <br>
-    {{name2}} pays {{ amount2}} <br>
-    </p>
+
+    <div class="result-text">
+        <div class="result-col">
+            <span>Period</span>
+            <span>: {{period}}</span>
+        </div>
+         <div class="result-col">
+            <span>{{name1}} pays </span>
+            <span>: {{ amount1}}</span>
+        </div>
+        <div class="result-col">
+            <span>{{name2}} pays </span>
+            <span>: {{ amount2}}</span>
+        </div>
+
+
+        <br>
+        Period:   {{period}} <br>
+        {{name1}} pays {{ amount1}} <br>
+        {{name2}} pays {{ amount2}} <br>
+
+
+
+    </div>
 
 </div>
 

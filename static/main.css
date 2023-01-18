@@ -189,11 +189,16 @@ input[type=submit]{
 .result{
    display: flex;
    flex-direction: column;
-
-
+   margin: 10px 10px ;
 }
 
 .result-text {
    font-size : 2rem;
+   display: flex;
+   flex-direction: column;
+}
 
+.result-col{
+    display: flex;
+    justify-content: center;
 }

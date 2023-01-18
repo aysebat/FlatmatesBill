@@ -51,4 +51,4 @@ class BillForm(Form):
 app.add_url_rule('/', view_func=HomePage.as_view('home_page'))
 app.add_url_rule('/bill', view_func=BillFormPage.as_view('bill_form_page'))
 app.add_url_rule('/results', view_func=ResultsPage.as_view('results_page'))
-app.run(host='0.0.0.0', debug=True)
+app.run(host='0.0.0.0',port='8000', debug=True)
